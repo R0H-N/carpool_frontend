@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+  <style>
+    :root{
+	--yellow:#EBB14D;
+	--darkblue:#3A3C6C;
+	--light:#cfd8ef;
+	--white:#fff;
+}
+*{margin: 0px; padding: 0px; font-family: system-ui;}
+.clearfix{clear: both;}
+header{padding: 10px 0px 0px 0px;}
+.container{width: 1200px; max-width: 100%; margin: 0 auto;}
+.col2{width: 20%;float: left;}
+.col3{width: 25%; float: left;}
+.col4{width: 33.3%;float: left;}
+.col6{width: 50%; float: left;}
+.input-box{display: inline-block;padding: 10px 18px;border: 1px solid #ddd;
+	margin-left:60px; width: 300px;}
+.input-box input{border: none; padding-left: 15px;outline: none;width: 82%; }
+.logo{display: block;float: left;}
+.s-btn{height: 45px;width: 52px;margin: -11px;background: var(--darkblue);
+    color: white; border: none; margin-right: -20px; cursor: pointer;
+}
+.s-btn:hover{background: var(--yellow); color: var(--darkblue);}
+.topnav li{list-style: none; float: left; padding:15px 20px;}
+.topnav li a{text-decoration: none; color: var(--darkblue);}
+.btn-r{padding: 11px 25px;
+    background: var(--darkblue);
+    color: white;
+    border: none;
+    margin-top: -16px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.btn-r:hover{background: var(--yellow); color: var(--darkblue);}
+.topnav{float: right;}
+.topnav li a:hover{
+	color: var(--yellow);
+}
+.header-bottom{background: var(--darkblue);}
+.bottomnav li{list-style: none; float: left; padding: 13px 30px;}
+.bottomnav li a{text-decoration: none; color:var(--white); font-weight: 200;}
+.active{background:var(--yellow);}
+.active a{color: var(--darkblue)!important;}
+.b-btn{    
+	padding: 13px 25px;
+    background: var(--yellow);
+    color: white;
+    border: none;
+    font-size: 16px;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.taxi-img{width: 100%;}
+.sec-1{ padding: 50px 0px 0px 0px;  height: 280px;
+ background: linear-gradient(var(--light), #fff);}
+.heading{font-size: 50px; color: var(--darkblue);}
+.sec-2{margin-top: 3%; padding: 100px 0px;}
+.heading-2{color: var(--darkblue); text-align: center;}
+.border{text-align: center; margin-bottom: 50px;}
+.box{width: 200px; text-align: center;}
+.sec-4{padding: 100px 0px;}
+.box h3{font-size: 15px; color: var(--darkblue); margin:15px 0px; font-weight: 500; }
+.box p{font-size: 13px; letter-spacing: 1px; line-height: 20px;}
+.icon-1{font-size: 30px;background: #ecb34c;border-radius: 33px;
+    color: #3a3c6c;
+	height: 60px;
+    width: 60px;
+    line-height: 60px;
+}
+.heading-3{color: var(--darkblue); }
+.p3{font-size: 13px; letter-spacing: 1px; line-height: 20px; width: 500px;}
+.p5{font-size: 13px; letter-spacing: 1px; line-height: 20px; color: var(--white);}
+.p5:after{
+	content: '';
+	position: absolute;
+	top: 75%;
+	right: 5%;
+	width: 50px;
+	height: 50px;
+	background: url(../image/quote.png);
+	background-size: 50px;
+	transform: rotateZ(184deg);
+}
+.content{float: left;padding: 41px;}
+.sec-5{background: var(--darkblue); padding: 100px 0px; position: relative; 
+	height: 150px; margin-top: -100px;}
+.footer-distributed {
+  background-color: var(--darkblue);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+.footer-distributed .footer-left p {color: var(--white);font-size: 14px;margin: 0;}
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+.footer-distributed .footer-links a:before {
+  content: "/";
+  font-size: 10px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+.footer-distributed .footer-links .link-1:before {content: none;}
+.footer-distributed .footer-right {float: right;margin-top: 6px;max-width: 180px;}
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: var(--yellow);
+  border-radius: 2px;
+  font-size: 20px;
+  color: var(--darkblue);
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+.footer-distributed .footer-right a:hover{transform:scale(1.1);}
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+  </style>
+</head>
+<body>
+
+<header>
+	<div class="container">
+		<div class="col6">
+			<img width="50" height="50" src="https://w1.pngwing.com/pngs/814/627/png-transparent-travel-passenger-car-driving-car-rental-taxi-carpool-driving-instructor-car-dealership-thumbnail.png" class="logo">
+			<div class="input-box">
+				<i class="fa fa-map-marker"></i>
+				<input type="text" placeholder="Tell us your location" />
+				<button class="s-btn">
+					<i class="fa fa-long-arrow-right"></i>
+				</button>
+			</div>
+		</div>
+		<div class="col6">
+			<ul class="topnav">
+				<li><a href="#">Ride</a></li>
+				<li><a href="#">Drive</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">Sign in</a></li>
+				<li><button class="btn-r">Ride With carpool</button></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+	<div class="header-bottom">
+		<div class="container">
+			<ul class="bottomnav">
+				<li class="active"><a href="#"><i class="fa fa-home"></i>  Home</a></li>
+				<li><a href="#"><i class="fa fa-exclamation-circle"></i>  About</a></li>
+				<li><a href="#"><i class="fa fa-gear"></i>  Our Services</a></li>
+				<li><a href="#"><i class="fa fa-taxi"></i>  Our Vechicles</a></li>
+				<li><a href="#"><i class="fa fa-gift"></i>  Packages</a></li>
+				<li><a href="#"><i class="fa fa-map-marker"></i>  Contact</a></li>
+			</ul>
+			<button class="b-btn">Become a Driver</button>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</header>
+
+
+<section class="sec-1">
+	<div class="container">
+		<div class="col6">
+			<h1 class="heading">Earn. Connect.<br>Contribute to<br>Socity</h1>
+			<p>Partner with us to drive your own livelihood and more.</p>
+			<br>
+			<button class="btn-r">Sign up Now</button>
+		</div>
+		<div class="col6">
+			<img src="https://img.freepik.com/free-vector/carpool-concept-illustration_114360-9298.jpg?w=1380&t=st=1694615966~exp=1694616566~hmac=bd508565c111ff4712500ae1555512dea34f775e14dfc4a13bfe68497e0f92ba" class="taxi-img">
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</section>
+
+
+<section class="sec-2">
+	<div class="container">
+
+		<h2 class="heading-2">How It Work</h2>
+		<div class="border"><img src="https://i.stack.imgur.com/91TTI.png"></div>
+		<br>
+		<div class="col3">
+			<div class="box">
+				<i class="fa fa-hand-o-up icon-1"></i>
+			<h3>Book in just 2 Tabs</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+			</div>
+		</div>
+		<div class="col3">
+			<div class="box">
+				<i class="fa fa-automobile icon-1"></i>
+			<h3>Get a Driver</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+			</div>
+		</div>
+		<div class="col3">
+			<div class="box">
+				<i class="fa fa-map-o icon-1"></i>
+			<h3>Track Your Driver</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</div>
+		</div>
+		<div class="col3">
+			<div class="box">
+				<i class="fa fa-user icon-1"></i>
+			<h3>Arrive Safely</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+
+	</div>
+</section>	
+
+
+<section class="sec-3">
+	<br><br>
+	<div class="container">
+		<h2 class="heading-3">About us</h2>
+
+		<div class="clearfix"></div>
+		<br><br>
+		<div class="col6">
+			<p class="p3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+		
+			</p>
+			<br><br>
+			<button class="btn-r">Read More</button>
+		</div>
+		<div class="col6">
+			<img src="https://img.freepik.com/free-vector/people-using-location-app-ordering-taxy_74855-10996.jpg?w=2000" style="width: 100%; margin-top: -100px;">
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</section>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+<script type="text/javascript">
+	$('.bottomnav li').click(function(){
+    $('.bottomnav li').removeClass("active");
+    $(this).addClass("active");
+});
+
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans serif;
+}
+body{
+    background-image: url("https://img.freepik.com/free-vector/carpool-concept-illustration_114360-9298.jpg?w=1380&t=st=1694615966~exp=1694616566~hmac=bd508565c111ff4712500ae1555512dea34f775e14dfc4a13bfe68497e0f92ba");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+.container{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+}
+span{
+    color: #fff;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+header{
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+}
+.input-field .input{
+    height: 45px;
+    width: 87%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: #fff;
+    padding: 0 0 0 42px;
+    background: rgba(255,255,255,0.1);
+}
+i{
+    position: relative;
+    top: -31px;
+    left: 17px;
+    color: #fff;
+}
+::-webkit-input-placeholder{
+    color: #fff;
+}
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    background: rgba(255,255,255,0.7);
+    cursor: pointer;
+    transition: .3s;
+}
+.submit:hover{
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+    color: #fff;
+    margin-top: 10px;
+}
+.left{
+    display: flex;
+}
+label a{
+    color: #fff;
+    text-decoration: none;
+}
+
+section#business-header {
+    background-image: url("https://www.uber-assets.com/image/upload/v1613106985/assets/0e/47aa71-35cb-459a-a975-78c61ea300e2/original/HP-U4B-NYC-bkg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+    padding-block: 4rem;
+  }
+  .business-header__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .business-header__text h3 {
+    font-size: 2.5rem;
+  }
+  .business-header__text p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+  }
+  
+  /* engagements SECTION */
+  
+  section#engagements__section {
+    padding-block: 4rem;
+  }
+  
+  #engagements__section h3 {
+    padding-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+  #engagements__section h4 {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+  
+  .engagements__section__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  /* INFOS SECTION */
+  
+  section#infos__section {
+    padding-block: 4rem;
+  }
+  .titre {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  .infos__section__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .infos__section__card .sous-titre {
+    padding-bottom: 1rem;
+  }
+  
+  /* APPLICATIONS SECTION */
+  
+  section#applications__section {
+    padding-block: 4rem;
+    overflow: hidden;
+  
+    background: #f1f1f1;
+    color: var(--clr-neutral-900);
+  }
+  section#applications__section h3 {
+    padding-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+  .app__card {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    background: var(--clr-neutral-100);
+    border: 1px solid hsla(0, 0%, 0%, 0.12);
+  }
+  .app__card span {
+    padding: 2.5rem 1.5rem;
+    font-size: 3rem;
+    font-weight: 600;
+    background: var(--clr-neutral-900);
+    color: var(--clr-neutral-100);
+  }
+  .app__titre {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  /* FOOTER */
+  
+  footer {
+    padding-block: 1rem;
+  }
+  
+  footer nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* MEDIA QUERIES */
+  
+  @media (max-width: 50rem) {
+    .infos__section__card {
+      margin-block: 1rem;
+    }
+    .main__cta__options {
+      gap: 2rem;
+    }
+  
+    .app__titre {
+      font-size: 1.2rem;
+    }
+    .app__card span {
+      padding: 1.5rem 0.75rem;
+      font-size: 2rem;
+    }
+    .app__card {
+      margin-block: 1rem;
+    }
+    .engagements__section__flex {
+      margin-block: 1rem;
+    }
+    section#infos__section {
+      padding-top: 0;
+    }
+    footer nav {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+  
