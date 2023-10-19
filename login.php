@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $_SESSION['email'] = $email; // Store user's email in a session variable
             // Redirect the user to the dashboard or home page
-            header("Location: loginpage.html"); // Change the URL to your dashboard page
+            header("Location: login.html"); // Change the URL to your dashboard page
             exit();
         } else {
             // Authentication failed (incorrect password)

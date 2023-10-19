@@ -34,7 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         if ($conn->query($insert_sql) === TRUE) {
             // Registration successful
-            $success_message = "Registration successful! You can now log in.";
+            header("Location: signup.html"); // Redirect to signup.html after successful registration
+            exit();
         } else {
             $error_message = "Error: " . $insert_sql . "<br>" . $conn->error;
         }
