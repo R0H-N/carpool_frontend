@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 echo "Reached here 1"; 
 
 // Check if the form is submitted
@@ -37,13 +39,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (password_verify($password, $stored_password)) {
             // Authentication successful
            
-            echo "Reached here 5"; 
-           
-            echo "Reached here 1"; 
+  
 
             $_SESSION['email'] = $email; // Store user's email in a session variable
             // Redirect the user to the dashboard or home page
-            header("Location: login.html"); // Change the URL to your dashboard page
+            header("Location: host_ride.php"); // Change the URL to your dashboard page
             exit();
         } else {
             // Authentication failed (incorrect password)
