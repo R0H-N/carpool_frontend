@@ -40,5 +40,11 @@
 }
 
 #SignupModal{
-    opacity: 0.5;
+    opacity: 0.9;
+}
+#LoginModal{
+    opacity: 0.9;
+}
+#container{
+    background-color: aliceblue;
 }

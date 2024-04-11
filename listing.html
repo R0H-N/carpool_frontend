@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car Pooling</title>
+	<link rel="stylesheet" type="text/css" href="listingstyle.css">
+</head>
+<body>
+	<h1>Car Pooling</h1>
+	<form>
+		<label for="carpool">Find your carpool:</label><br>
+		<input type="text" id="carpool" name="carpool"><br>
+		<label for="frequency">Trip Frequency:</label><br>
+		<input type="radio" id="regular" name="frequency" value="regular">
+		<label for="regular">Regular</label><br>
+		<input type="radio" id="casual" name="frequency" value="casual">
+		<label for="casual">Casual</label><br>
+		<input type="radio" id="both" name="frequency" value="both" checked>
+		<label for="both">Both</label><br>
+		<label for="return">Return Journey:</label><br>
+		<input type="radio" id="yes" name="return" value="yes">
+		<label for="yes">Yes</label><br>
+		<input type="radio" id="no" name="return" value="no" checked>
+		<label for="no">No</label><br>
+		<label for="gender">Gender:</label><br>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Female</label><br>
+		<input type="radio" id="male" name="gender" value="male">
+		<label for="male">Male</label><br>
+		<input type="radio" id="both" name="gender" value="both" checked>
+		<label for="both">Both</label><br>
+		<label for="comfort">Car comfort level:</label><br>
+		<input type="radio" id="normal" name="comfort" value="normal">
+		<label for="normal">Normal</label><br>
+		<input type="radio" id="basic" name="comfort" value="basic">
+		<label for="basic">Basic</label><br>
+		<input type="radio" id="comfortable" name="comfort" value="comfortable" checked>
+		<label for="comfortable">Comfortable</label><br>
+		<input type="radio" id="luxury" name="comfort" value="luxury">
+		<label for="luxury">Luxury</label><br>
+		<label for="location">Chennai, Tamil Nadu, India</label><br>
+		<input type="text" id="location" name="location" value="demo1.user 28/06/2017 Wednesday - 2:00 am" disabled><br>
+		<label for="trip">Chennai Bengaluru</label><br>
+		<input type="text" id="trip" name="trip" value="No More Trips!" disabled><br>
+		<input type="submit" value="POST A TRIP">
+		<input type="submit" value="LOGIN">
+		<input type="submit" value="REGISTER">
+	</form>
+	<div class="view-options">
+		<label for="list">List View</label>
+		<input type="radio" id="list" name="view" value="list" checked>
+		<label for="map">Map View</label>
+		<input type="radio" id="map" name="view" value="map">
+	</div>
+	<div class="search-results">
+		<h2>USD2,000 per passenger</h2>
+		<p>4 Available Seat:</p>
+	</div>
+</body>
+</html>

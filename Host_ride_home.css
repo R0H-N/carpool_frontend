@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+
+
+.navbar .navbar-nav .nav-item a{
+    padding: 15px;
+
+}
+.navbar .navbar-nav .nav-but{
+    padding:5px;
+}
+.back-video{
+    position: absolute;
+    right:0;
+    bottom:0;
+    z-index: -1;
+
+}
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width:100%;
+        height:auto;
+    }
+    
+}
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width:auto;
+        height:100%;
+    }
+    
+}
+
+#SignupModal{
+    opacity: 0.9;
+}
+#LoginModal{
+    opacity: 0.9;
+}
+.container1 {
+    width: 600px;
+    height: 600px;
+    margin: 5px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Added transition */
+    
+    opacity: 0.9;
+    overflow: auto;
+  
+   
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .option {
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .option:hover {
+    background-color: black;
+  }
+  
+  /* Form Styles */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group select {
+    appearance: none;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .form-group input[type="text"]:focus,
+  .form-group input[type="number"]:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: black;
+  }
+  
+  .form-group textarea {
+    height: 100px;
+  }
+  
+  .form-group select {
+    padding: 10px;
+  }
+  
+  .host-ride-button,
+  .get-ride-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color:black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .host-ride-button:hover,
+  .get-ride-button:hover {
+    background-color: black;
+  }
