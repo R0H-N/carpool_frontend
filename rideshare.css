@@ -45,11 +45,6 @@
 #LoginModal{
     opacity: 0.9;
 }
-<<<<<<<< HEAD:contactus.css
-#container{
-    background-color: aliceblue;
-}
-========
 .container1 {
     width: 600px;
     height: 70  0px;
@@ -153,4 +148,3 @@
   .get-ride-button:hover {
     background-color: black;
   }
->>>>>>>> origin/main:stylehome.css

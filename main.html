@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="stylemain.css" />
+    
+  </head>
+
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <section class="home">
+      <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="green-car-removebg-preview.png"
+              alt="Logo"
+              width="40"
+              height="30"
+              class="d-inline-block align-text-top"
+            /><b> Carpooling </b>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contactus.html">About Us</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Contact</a>
+              </li>
+             
+             
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-but">
+                <a class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#SignupModal" href="#">SignUp</a>
+              </li>
+              <li class="nav-but">
+                <a class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#LoginModal" href="#">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <video autoplay loop muted plays-inline class="back-video">
+        <source src="Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+    </video>
+</section>
+<div class="search-bar">
+  <input type="text" class="search-input" placeholder="Search for carpools...">
+  <div class="view-options">
+    <img src="https://w7.pngwing.com/pngs/93/40/png-transparent-notepad-illustration-computer-icons-iconfinder-action-item-list-icon-miscellaneous-angle-text-thumbnail.png" width="15px">
+    <button class="list-view">List View</button>
+    <img src="https://w7.pngwing.com/pngs/325/237/png-transparent-map-location-map-logo-symbol-location-icon-thumbnail.png"width="15px">
+    <button class="map-view">Map View</button>
+  </div>
+</div>
+<div class="container">
+  <div class="available-carpools">
+    <h1>Available Carpools</h1>
+  </div>
+  <div class="frequency-options">
+    <h3>Trip Frequency</h3>
+    <label>
+      <input type="radio" name="trip-frequency" value="regular" checked> Regular
+    </label>
+    <label>
+      <input type="radio" name="trip-frequency" value="casual"> Casual
+    </label>
+    <label>
+      <input type="radio" name="trip-frequency" value="both"> Both
+    </label>
+  </div>
+  <div class="returnjourney-options">
+    <h3>Return Journey</h3>
+    <label>
+      <input type="radio" name="return-journey" value="yes" checked> Yes
+    </label>
+    <label>
+      <input type="radio" name="return-journey" value="no"> No
+    </label>
+  </div>
+  <div class="option-group">
+    <h2>Gender</h2>
+    <label>
+      <input type="radio" name="gender" value="female" checked> Female
+    </label>
+    <label>
+      <input type="radio" name="gender" value="male"> Male
+    </label>
+    <label>
+      <input type="radio" name="gender" value="both"> Both
+    </label>
+  </div>
+  <div class="option-group">
+    <h2>Car Comfort Level</h2>
+    <label>
+      <input type="radio" name="car-comfort" value="normal" checked> Normal
+    </label>
+    <label>
+      <input type="radio" name="car-comfort" value="basic"> Basic
+    </label>
+    <label>
+      <input type="radio" name="car-comfort" value="comfortable"> Comfortable
+    </label>
+    <label>
+      <input type="radio" name="car-comfort" value="luxury"> Luxury
+    </label>
+  </div>
+  <!-- Add your carpool information here -->
+</div>
+
+
+</html>
