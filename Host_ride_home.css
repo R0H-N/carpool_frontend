@@ -47,15 +47,14 @@
 }
 .container1 {
     width: 600px;
-    height: 70  0px;
-    margin: 50px auto;
+    height: 600px;
+    margin: 5px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease; /* Added transition */
-    margin-left: auto; /* Shift container to the right */
-    margin-right: 50px;
+    
     opacity: 0.9;
     overflow: auto;
   

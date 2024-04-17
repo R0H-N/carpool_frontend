@@ -11,46 +11,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="Host_ride_home.css" />
-    <style>
-        .container {
-            display: flex;
-            justify-content: space-around; /* Adjust as needed */
-            align-items: center; /* Align items vertically */
-            margin-top: 210px;
-            margin-left: 200px; /* Adjust as needed */
-            transform: scale(1.1);
-            text-decoration: none;
-          
-          }
-          
-          .host-box,
-          .get-box {
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            text-align: center;
-            outline: solid 1px black;
-            text-decoration: none;
-            opacity: 0.9;
-          }
-          
-          .host-text,
-          .get-text {
-            color: #333333;
-            font-size: 30px;
-            font-weight: bold;
-            text-decoration: none;
-          }
-          
-        
-      </style>
     
   </head>
 
   <body>
-  
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -112,9 +76,8 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="update_profile.html">Edit Profile</a>
-            </li>
-            
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-but">
@@ -197,25 +160,52 @@
 <video autoplay loop muted plays-inline class="back-video">
     <source src="Untitled video - Made with Clipchamp.mp4" type="video/mp4">
 </video>
-<<<<<<< HEAD
 
-
-
-<script src="home.js"></script>
-    </section>
+<
+<div class="container1">
+  <h1><b>Ride Sharing</b></h1>
   
-
-=======
-<div class="container">
-    <div class="host-box">
-      <a style="text-decoration:none;" href="Host_ride_home.html"><p class="host-text">Host A Ride</p>
-    </div>
-    <div class="get-box">
-        <a  style="text-decoration:none;" href="Get_ride_home.html"><p class="get-text">Get A Ride</p>
-    </div>
+  <h3>Get a Ride....</h3>
+  <br>
+  <div id="get-ride-form" >
+    <form>
+      <div class="form-group">
+        <label for="pickup-location">Pickup Location:</label>
+        <input type="text" id="pickup-location" name="pickup-location" required>
+      </div>
+      <div class="form-group">
+        <label for="destination-get">Destination:</label>
+        <input type="text" id="destination-get" name="destination-get" required>
+      </div>
+      <div class="form-group">
+        <label for="seats-required">Seats Required:</label>
+        <input type="number" id="seats-required" name="seats-required" required>
+      </div>
+      <div class="form-group">
+        <label for="luggage-present">Luggage Present:</label>
+        <select id="luggage-present" name="luggage-present" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="pickup-date">Pickup Date:</label>
+        <input type="date" id="pickup-date" name="pickup-date" required>
+      </div>
+      <div class="form-group">
+        <label for="pickup-time">Pickup Time:</label>
+        <input type="time" id="pickup-time" name="pickup-time" required>
+      </div>
+      <div class="form-group">
+        <label for="additional-info">Additional Information:</label>
+        <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+      </div>
+      <button type="submit" class="get-ride-button"style="background-color: black;">Get Ride</button>
+    </form>
   </div>
->>>>>>> 0b047e623e75fe026d3a8dad779b1d2ec18757d9
+</div>
 
+ 
 
 <script src="home.js"></script>
     </section>
