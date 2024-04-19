@@ -199,24 +199,86 @@
 </video>
 
 <div class="container">
-    <div class="host-box">
-      <a style="text-decoration:none;" href="Host_ride_home.html"><p class="host-text">Host A Ride</p>
-    </div>
+  <div class="host-box">
+    <a style="text-decoration:none;" href="Host_ride_home.html" id="host-ride-link">
+        <p class="host-text">Host A Ride</p>
+    </a>
+</div>
+
+<script>
+    // Get the anchor tag for hosting a ride
+    var hostRideLink = document.getElementById('host-ride-link');
+
+    // Add click event listener to the anchor tag
+    hostRideLink.addEventListener('click', function(event) {
+        // Prevent the default link action
+        event.preventDefault();
+
+        // Fetch the login status asynchronously
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var isLoggedIn = JSON.parse(xhr.responseText);
+                    if (!isLoggedIn) {
+                        alert("Please log in to continue.");
+                    } else {
+                        // Redirect to the page for hosting a ride
+                        window.location.href = "Host_ride_home.html";
+                    }
+                } else {
+                    console.error('Error fetching login status:', xhr.status);
+                }
+            }
+        };
+        xhr.open('GET', 'check_login.php', true);
+        xhr.send();
+    });
+</script>
+
     <div class="get-box">
-        <a  style="text-decoration:none;" href="Get_ride_home.html"><p class="get-text">Get A Ride</p>
-    </div>
+      <a style="text-decoration:none;" href="ride_listing.php" id="get-ride-link">
+          <p class="get-text">Get A Ride</p>
+      </a>
+  </div>
+  
+  <script>
+      // Get the anchor tag
+      var getRideLink = document.getElementById('get-ride-link');
+  
+      // Add click event listener to the anchor tag
+      getRideLink.addEventListener('click', function(event) {
+          // Prevent the default link action
+          event.preventDefault();
+  
+          // Fetch the login status asynchronously
+          var xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function() {
+              if (xhr.readyState === XMLHttpRequest.DONE) {
+                  if (xhr.status === 200) {
+                      var isLoggedIn = JSON.parse(xhr.responseText);
+                      if (!isLoggedIn) {
+                          alert("Please log in to continue.");
+                      } else {
+                          // Redirect to the ride listing page
+                          window.location.href = "ride_listing.php";
+                      }
+                  } else {
+                      console.error('Error fetching login status:', xhr.status);
+                  }
+              }
+          };
+          xhr.open('GET', 'check_login.php', true);
+          xhr.send();
+      });
+  </script>
+  
+    
   </div>
 
 
 
 <script src="home.js"></script>
     </section>
-  
-
-
-
-
-
-
 
 </html>
