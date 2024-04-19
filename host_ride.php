@@ -43,6 +43,9 @@
       if ($conn->query($insert_sql) === TRUE) {
           // Ride hosted successfully
           $success_message = "Ride hosted successfully.";
+          // Redirect to the thank you page
+          header("Location: thank_host.html");
+          exit();
       } else {
           // Error inserting ride into the database
           $error_message = "Error hosting ride: " . $conn->error;

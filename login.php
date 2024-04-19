@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $_SESSION['email'] = $email; // Store user's email in a session variable
             // Redirect the user to the dashboard or home page
-            header("Location: ride_listing.php"); // Change the URL to your dashboard page
+            header("Location: home.html"); // Change the URL to your dashboard page
             exit();
         } else {
             // Authentication failed (incorrect password)
