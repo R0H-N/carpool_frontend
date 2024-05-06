@@ -1,4 +1,7 @@
 <?php
+// Start session
+session_start();
+
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve form data
@@ -63,7 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Prepare and execute SQL statement to update user profile with file path
             $sql = "UPDATE users SET name='$name', bio='$bio', profile_pic='$file_path' WHERE email='$_SESSION[email]'";
             if ($conn->query($sql) === TRUE) {
-                echo "Profile updated successfully.";
+                header("Location: profile.php");
+                exit();
             } else {
                 echo "Error updating profile: " . $conn->error;
             }

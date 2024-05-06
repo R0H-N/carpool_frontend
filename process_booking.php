@@ -60,6 +60,8 @@ if ($ride_result->num_rows > 0) {
         // Return success response
         echo json_encode(array("success" => true, "message" => "Ride booked successfully."));
         exit();
+        header("Location: thank_you.php");
+
     } else {
         // Error updating database
         echo json_encode(array("success" => false, "message" => "Error updating database: " . $conn->error));

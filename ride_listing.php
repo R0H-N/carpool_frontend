@@ -34,6 +34,21 @@
 
     <div class="container">
         <h2>All Available Rides</h2>
+        <!-- Search form -->
+        <form method="post">
+            <div class="mb-3">
+                <label for="departure" class="form-label">Departure Location:</label>
+                <input type="text" class="form-control" id="departure" name="departure" placeholder="Enter departure location">
+            </div>
+            <div class="mb-3">
+                <label for="destination" class="form-label">Destination:</label>
+                <input type="text" class="form-control" id="destination" name="destination" placeholder="Enter destination">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <!-- End of search form -->
+
+        <!-- PHP code to display rides -->
         <?php
         // Database connection parameters
         $servername = "localhost";
@@ -79,6 +94,7 @@
             echo "<p>No rides available.</p>";
         }
         ?>
+        <!-- End of PHP code to display rides -->
     </div>
 
     <script>
@@ -102,6 +118,8 @@
                 if (data.success) {
                     // Booking successful, display success message to user
                     alert(data.message);
+
+                    window.location.href = "thank_host.html";
                     // Optionally, you can reload the page or update the UI as needed
                     window.location.reload(); // Reload the page to reflect changes
                 } else {
@@ -116,8 +134,6 @@
             });
         }
     }
-</script>
-
-
+    </script>
 </body>
 </html>
