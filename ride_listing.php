@@ -1,53 +1,9 @@
-<?php
-// Start session
-session_start();
-
-// Check if the user is logged in
-if (!isset($_SESSION['email'])) {
-    // Redirect to the login page if the user is not logged in
-    header("Location: login.html");
-    exit();
-}
-
-// Database connection parameters
-$servername = "localhost";
-$username = "root";
-$db_password = ""; // Please replace with your actual database password
-$database = "carpool_db";
-
-// Create a connection to the database
-$conn = new mysqli($servername, $username, $db_password, $database);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Retrieve rides hosted by the logged-in user
-$email = $_SESSION['email']; // Get the email of the logged-in user
-
-// Retrieve search parameters if form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $departure = $_POST['departure'];
-    $destination = $_POST['destination'];
-    $sql = "SELECT * FROM rides WHERE user_email = '$email' AND departure_location LIKE '%$departure%' AND destination LIKE '%$destination%' AND booking_status = 0";
-} else {
-    // If form is not submitted, retrieve all rides hosted by the user
-    $sql = "SELECT * FROM rides WHERE user_email = '$email' AND booking_status = 0";
-}
-
-$result = $conn->query($sql);
-
-// Close the database connection
-$conn->close();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Hosted Rides</title>
+    <title>All Available Rides</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
     <link rel="stylesheet" href="rideshare.css" /> <!-- Assuming you have a rideshare.css file for styling -->
     <style>
@@ -72,18 +28,39 @@ $conn->close();
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Carpooling</a>
-                <form class="d-flex" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                    <input class="form-control me-2" type="search" placeholder="Departure" aria-label="Search" name="departure">
-                    <input class="form-control me-2" type="search" placeholder="Destination" aria-label="Search" name="destination">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </nav>
     </section>
 
     <div class="container">
-        <h2>My Hosted Rides</h2>
+        <h2>All Available Rides</h2>
         <?php
+        // Database connection parameters
+        $servername = "localhost";
+        $username = "root";
+        $db_password = ""; // Please replace with your actual database password
+        $database = "carpool_db";
+
+        // Create a connection to the database
+        $conn = new mysqli($servername, $username, $db_password, $database);
+
+        // Check the connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Retrieve search parameters if form is submitted
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $departure = $_POST['departure'];
+            $destination = $_POST['destination'];
+            $sql = "SELECT * FROM rides WHERE departure_location LIKE '%$departure%' AND destination LIKE '%$destination%' AND booking_status = 0";
+        } else {
+            // If form is not submitted, retrieve all rides
+            $sql = "SELECT * FROM rides WHERE booking_status = 0";
+        }
+
+        $result = $conn->query($sql);
+
         if ($result && $result->num_rows > 0) {
             // Output data of each row
             while($row = $result->fetch_assoc()) {
@@ -99,16 +76,48 @@ $conn->close();
                 <?php
             }
         } else {
-            echo "<p>No rides hosted yet.</p>";
+            echo "<p>No rides available.</p>";
         }
         ?>
     </div>
 
     <script>
-        function bookRide(rideId) {
-            // You can implement the booking logic here, like making an AJAX request to the server
-            alert("Booking ride with ID: " + rideId);
+    function bookRide(rideId) {
+        // Display a confirmation message
+        var confirmed = window.confirm("Are you sure you want to book this ride?");
+        
+        // If user confirms, proceed with booking
+        if (confirmed) {
+            // AJAX request to process_booking.php
+            fetch("process_booking.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: "rideId=" + rideId
+            })
+            .then(response => response.json()) // Parse response as JSON
+            .then(data => {
+                // Check if the response is successful
+                if (data.success) {
+                    // Booking successful, display success message to user
+                    alert(data.message);
+                    // Optionally, you can reload the page or update the UI as needed
+                    window.location.reload(); // Reload the page to reflect changes
+                } else {
+                    // Booking failed, display error message to user
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                // Handle errors
+                console.error("There was a problem with the fetch operation:", error);
+                alert("An error occurred. Please try again later.");
+            });
         }
-    </script>
+    }
+</script>
+
+
 </body>
 </html>
